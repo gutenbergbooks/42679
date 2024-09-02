@@ -1,0 +1,3713 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>FIRES - BOOK III</title>
+</head>
+<body>
+  <div class="document" id="fires-book-iii">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">FIRES - BOOK III</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container titlepage">
+      <p class="center pfirst"><span class="x-large">FIRES</span></p>
+      <p class="center pnext"><span class="large">BOOK III<br />
+      THE HARE, AND OTHER TALES</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">BY</span></p>
+      <p class="center pnext"><span class="large">WILFRID WILSON GIBSON</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">LONDON<br />
+      ELKIN MATHEWS, VIGO STREET<br />
+      M CM XII</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container verso">
+      <p class="center pfirst"><em class="italics small">BY THE SAME WRITER</em> <span class="small"><br />
+      WOMENKIND (1912)<br />
+      DAILY BREAD (1910)<br />
+      THE STONEFOLDS (1907)<br />
+      ON THE THRESHOLD (1907)</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <p class="center pfirst"><span class="large">CONTENTS</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="noindent pfirst"><a class="reference internal" href="#the-dancing-seal">The Dancing Seal</a> <span><br /></span><a class="reference internal" href="#the-slag">The Slag</a> <span><br /></span><a class="reference internal" href="#devil-s-edge">Devil's Edge</a> <span><br /></span><a class="reference internal" href="#the-lilac-tree">The Lilac Tree</a> <span><br /></span><a class="reference internal" href="#the-old-man">The Old Man</a> <span><br /></span><a class="reference internal" href="#the-hare">The Hare</a></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="pfirst"><em class="italics medium">Thanks are due to the editors of</em> <span class="medium">RHYTHM,</span> <em class="italics medium">and</em> <span class="medium">THE NATION,</span> <em class="italics medium">for leave to reprint some of these tales</em><span class="medium">.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-dancing-seal"><span class="x-large">FIRES</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <p class="center pfirst"><span class="large">THE DANCING SEAL</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>When we were building Skua Light--</span>
+          </div>
+          <div class="line">
+            <span>The first men who had lived a night</span>
+          </div>
+          <div class="line">
+            <span>Upon that deep-sea Isle--</span>
+          </div>
+          <div class="line">
+            <span>As soon as chisel touched the stone,</span>
+          </div>
+          <div class="line">
+            <span>The friendly seals would come ashore;</span>
+          </div>
+          <div class="line">
+            <span>And sit and watch us all the while,</span>
+          </div>
+          <div class="line">
+            <span>As though they'd not seen men before;</span>
+          </div>
+          <div class="line">
+            <span>And so, poor beasts, had never known</span>
+          </div>
+          <div class="line">
+            <span>Men had the heart to do them harm.</span>
+          </div>
+          <div class="line">
+            <span>They'd little cause to feel alarm</span>
+          </div>
+          <div class="line">
+            <span>With us, for we were glad to find</span>
+          </div>
+          <div class="line">
+            <span>Some friendliness in that strange sea;</span>
+          </div>
+          <div class="line">
+            <span>Only too pleased to let them be</span>
+          </div>
+          <div class="line">
+            <span>And sit as long as they'd a mind</span>
+          </div>
+          <div class="line">
+            <span>To watch us: for their eyes were kind</span>
+          </div>
+          <div class="line">
+            <span>Like women's eyes, it seemed to me.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>So, hour on hour, they sat: I think</span>
+          </div>
+          <div class="line">
+            <span>They liked to hear the chisels' clink:</span>
+          </div>
+          <div class="line">
+            <span>And when the boy sang loud and clear,</span>
+          </div>
+          <div class="line">
+            <span>They scrambled closer in to hear;</span>
+          </div>
+          <div class="line">
+            <span>And if he whistled sweet and shrill,</span>
+          </div>
+          <div class="line">
+            <span>The queer beasts shuffled nearer still:</span>
+          </div>
+          <div class="line">
+            <span>But every sleek and sheeny skin</span>
+          </div>
+          <div class="line">
+            <span>Was mad to hear his violin.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>When, work all over for the day,</span>
+          </div>
+          <div class="line">
+            <span>He'd take his fiddle down and play</span>
+          </div>
+          <div class="line">
+            <span>His merry tunes beside the sea,</span>
+          </div>
+          <div class="line">
+            <span>Their eyes grew brighter and more bright,</span>
+          </div>
+          <div class="line">
+            <span>And burned and twinkled merrily:</span>
+          </div>
+          <div class="line">
+            <span>And as I watched them one still night,</span>
+          </div>
+          <div class="line">
+            <span>And saw their eager sparkling eyes,</span>
+          </div>
+          <div class="line">
+            <span>I felt those lively seals would rise</span>
+          </div>
+          <div class="line">
+            <span>Some shiny night ere he could know,</span>
+          </div>
+          <div class="line">
+            <span>And dance about him, heel and toe,</span>
+          </div>
+          <div class="line">
+            <span>Unto the fiddle's heady tune.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And at the rising of the moon,</span>
+          </div>
+          <div class="line">
+            <span>Half-daft, I took my stand before</span>
+          </div>
+          <div class="line">
+            <span>A young seal lying on the shore;</span>
+          </div>
+          <div class="line">
+            <span>And called on her to dance with me.</span>
+          </div>
+          <div class="line">
+            <span>And it seemed hardly strange when she</span>
+          </div>
+          <div class="line">
+            <span>Stood up before me suddenly,</span>
+          </div>
+          <div class="line">
+            <span>And shed her black and sheeny skin;</span>
+          </div>
+          <div class="line">
+            <span>And smiled, all eager to begin...</span>
+          </div>
+          <div class="line">
+            <span>And I was dancing, heel and toe,</span>
+          </div>
+          <div class="line">
+            <span>With a young maiden white as snow,</span>
+          </div>
+          <div class="line">
+            <span>Unto a crazy violin.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>We danced beneath the dancing moon,</span>
+          </div>
+          <div class="line">
+            <span>All night, beside the dancing sea,</span>
+          </div>
+          <div class="line">
+            <span>With tripping toes and skipping heels:</span>
+          </div>
+          <div class="line">
+            <span>And all about us friendly seals</span>
+          </div>
+          <div class="line">
+            <span>Like Christian folk were dancing reels</span>
+          </div>
+          <div class="line">
+            <span>Unto the fiddle's endless tune</span>
+          </div>
+          <div class="line">
+            <span>That kept on spinning merrily</span>
+          </div>
+          <div class="line">
+            <span>As though it never meant to stop.</span>
+          </div>
+          <div class="line">
+            <span>And never once the snow-white maid</span>
+          </div>
+          <div class="line">
+            <span>A moment stayed</span>
+          </div>
+          <div class="line">
+            <span>To take a breath,</span>
+          </div>
+          <div class="line">
+            <span>Though I was fit to drop:</span>
+          </div>
+          <div class="line">
+            <span>And while those wild eyes challenged me,</span>
+          </div>
+          <div class="line">
+            <span>I knew as well as well could be</span>
+          </div>
+          <div class="line">
+            <span>I must keep step with that young girl,</span>
+          </div>
+          <div class="line">
+            <span>Though we should dance to death.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Then with a skirl</span>
+          </div>
+          <div class="line">
+            <span>The fiddle broke:</span>
+          </div>
+          <div class="line">
+            <span>The moon went out:</span>
+          </div>
+          <div class="line">
+            <span>The sea stopped dead:</span>
+          </div>
+          <div class="line">
+            <span>And, in a twinkling, all the rout</span>
+          </div>
+          <div class="line">
+            <span>Of dancing folk had fled...</span>
+          </div>
+          <div class="line">
+            <span>And in the chill bleak dawn I woke</span>
+          </div>
+          <div class="line">
+            <span>Upon the naked rock, alone.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>They've brought me far from Skua Isle...</span>
+          </div>
+          <div class="line">
+            <span>I laugh to think they do not know</span>
+          </div>
+          <div class="line">
+            <span>That as, all day, I chip the stone,</span>
+          </div>
+          <div class="line">
+            <span>Among my fellows here inland,</span>
+          </div>
+          <div class="line">
+            <span>I smell the sea-wrack on the shore...</span>
+          </div>
+          <div class="line">
+            <span>And see her snowy-tossing hand,</span>
+          </div>
+          <div class="line">
+            <span>And meet again her merry smile...</span>
+          </div>
+          <div class="line">
+            <span>And dream I'm dancing all the while,</span>
+          </div>
+          <div class="line">
+            <span>I'm dancing ever, heel and toe,</span>
+          </div>
+          <div class="line">
+            <span>With a seal-maiden, white as snow,</span>
+          </div>
+          <div class="line">
+            <span>On that moonshiny Island-strand,</span>
+          </div>
+          <div class="line">
+            <span>For ever and for evermore.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-slag"><span class="large">THE SLAG</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Among bleak hills of mounded slag they walked,</span>
+          </div>
+          <div class="line">
+            <span>'Neath sullen evening skies that seemed to sag</span>
+          </div>
+          <div class="line">
+            <span>O'er-burdened by the belching smoke, and lie</span>
+          </div>
+          <div class="line">
+            <span>Upon their aching foreheads, dense and dank,</span>
+          </div>
+          <div class="line">
+            <span>Till both felt youth within them fail and flag--</span>
+          </div>
+          <div class="line">
+            <span>Even as the flame which shot a fiery rag</span>
+          </div>
+          <div class="line">
+            <span>A fluttering moment through the murky sky</span>
+          </div>
+          <div class="line">
+            <span>Above the black blast-furnaces, then sank</span>
+          </div>
+          <div class="line">
+            <span>Again beneath the iron bell close-bound--</span>
+          </div>
+          <div class="line">
+            <span>And it was all that they could do to drag</span>
+          </div>
+          <div class="line">
+            <span>Themselves along, 'neath that dead-weight of smoke,</span>
+          </div>
+          <div class="line">
+            <span>Over the cinder-blasted, barren ground.</span>
+          </div>
+          <div class="line">
+            <span>Though fitfully and fretfully she talked,</span>
+          </div>
+          <div class="line">
+            <span>He never turned his eyes to her, or spoke:</span>
+          </div>
+          <div class="line">
+            <span>And as he slouched with her along the track</span>
+          </div>
+          <div class="line">
+            <span>That skirted a stupendous, lowering mound,</span>
+          </div>
+          <div class="line">
+            <span>With listless eyes, and o'er-strained sinews slack,</span>
+          </div>
+          <div class="line">
+            <span>She bit a petted, puckered lip, and frowned</span>
+          </div>
+          <div class="line">
+            <span>To think she ever should be walking out</span>
+          </div>
+          <div class="line">
+            <span>With this tongue-tied, slow-witted, hulking lout,</span>
+          </div>
+          <div class="line">
+            <span>As cold and dull and lifeless as the slag.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And, all on edge, o'erwrought by the crampt day</span>
+          </div>
+          <div class="line">
+            <span>Of crouched, close stitching at her dull machine,</span>
+          </div>
+          <div class="line">
+            <span>It seemed to her a girl of seventeen</span>
+          </div>
+          <div class="line">
+            <span>Should have, at least, an hour of careless talking--</span>
+          </div>
+          <div class="line">
+            <span>Should have, at least, an hour of life, out walking</span>
+          </div>
+          <div class="line">
+            <span>Beside a lover, mettlesome and gay--</span>
+          </div>
+          <div class="line">
+            <span>Not through her too short freedom doomed to lag</span>
+          </div>
+          <div class="line">
+            <span>Beside a sparkless giant, glum and grim,</span>
+          </div>
+          <div class="line">
+            <span>Till all her eager youth should waste away.</span>
+          </div>
+          <div class="line">
+            <span>Yet, even as she looked askance at him--</span>
+          </div>
+          <div class="line">
+            <span>Well-knit, big-thewed, broad-chested, steady-eyed--</span>
+          </div>
+          <div class="line">
+            <span>She dimly knew of depths she could not sound</span>
+          </div>
+          <div class="line">
+            <span>In this strong lover, silent at her side:</span>
+          </div>
+          <div class="line">
+            <span>And, once again, her heart was touched with pride</span>
+          </div>
+          <div class="line">
+            <span>To think that he was hers, this strapping lad--</span>
+          </div>
+          <div class="line">
+            <span>Black-haired, close-cropt, clean-skinned, and neatly clad...</span>
+          </div>
+          <div class="line">
+            <span>His crimson neckerchief, so smartly tied--</span>
+          </div>
+          <div class="line">
+            <span>And hers alone, and more than all she had</span>
+          </div>
+          <div class="line">
+            <span>In all the world to her ... and yet, so grave!</span>
+          </div>
+          <div class="line">
+            <span>If he would only shew that he was glad</span>
+          </div>
+          <div class="line">
+            <span>To be with her--a gleam, a spark of fire,</span>
+          </div>
+          <div class="line">
+            <span>A spurt of flame to shoot into the night,</span>
+          </div>
+          <div class="line">
+            <span>A moment through the murky heavens to wave</span>
+          </div>
+          <div class="line">
+            <span>An eager beacon of enkindling light</span>
+          </div>
+          <div class="line">
+            <span>In answer to her young heart's quick desire!</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Yet, though he walked with dreaming eyes agaze,</span>
+          </div>
+          <div class="line">
+            <span>As, deep within a mound of slag, a core</span>
+          </div>
+          <div class="line">
+            <span>Of unseen fire may smoulder many days,</span>
+          </div>
+          <div class="line">
+            <span>Till suddenly the whole heap glow ablaze,</span>
+          </div>
+          <div class="line">
+            <span>That seemed, but now, dead cinder, grey and cold,</span>
+          </div>
+          <div class="line">
+            <span>Life smouldered in his heart. The fire he fed</span>
+          </div>
+          <div class="line">
+            <span>Day-long in the tall furnace just ahead</span>
+          </div>
+          <div class="line">
+            <span>From that frail gallery slung against the sky</span>
+          </div>
+          <div class="line">
+            <span>Had burned through all his being, till the ore</span>
+          </div>
+          <div class="line">
+            <span>Glowed in him. Though no surface-stream of gold</span>
+          </div>
+          <div class="line">
+            <span>Quick-molten slag of speech was his to spill</span>
+          </div>
+          <div class="line">
+            <span>Unceasingly, the burning metal still</span>
+          </div>
+          <div class="line">
+            <span>Seethed in him, from the broken furnace-side</span>
+          </div>
+          <div class="line">
+            <span>To burst at any moment in a tide</span>
+          </div>
+          <div class="line">
+            <span>Of white-hot molten iron o'er the mould...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>But still he spoke no word as they strolled on</span>
+          </div>
+          <div class="line">
+            <span>Into the early-gathering Winter night:</span>
+          </div>
+          <div class="line">
+            <span>And, as she watched the leaping furnace-light,</span>
+          </div>
+          <div class="line">
+            <span>She had no thought of smouldering fires unseen...</span>
+          </div>
+          <div class="line">
+            <span>The daylong clattering whirr of her machine</span>
+          </div>
+          <div class="line">
+            <span>Hummed in her ears again--the straining thread</span>
+          </div>
+          <div class="line">
+            <span>And stabbing needle starting through her head--</span>
+          </div>
+          <div class="line">
+            <span>Until the last dull gleam of day was gone...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>When, all at once, upon the right,</span>
+          </div>
+          <div class="line">
+            <span>A crackling crash, a blinding flare...</span>
+          </div>
+          <div class="line">
+            <span>A shower of cinders through the air...</span>
+          </div>
+          <div class="line">
+            <span>A grind of blocks of slag aslide...</span>
+          </div>
+          <div class="line">
+            <span>And, far above them, in the night,</span>
+          </div>
+          <div class="line">
+            <span>The looming heap had opened wide</span>
+          </div>
+          <div class="line">
+            <span>About a fiery, gaping pit...</span>
+          </div>
+          <div class="line">
+            <span>And, startled and aghast at it,</span>
+          </div>
+          <div class="line">
+            <span>With clasping hands they stood astare,</span>
+          </div>
+          <div class="line">
+            <span>And gazed upon the awful glare:</span>
+          </div>
+          <div class="line">
+            <span>And, as she felt him clutch her hand,</span>
+          </div>
+          <div class="line">
+            <span>She seemed to know her heart's desire,</span>
+          </div>
+          <div class="line">
+            <span>For evermore with him to stand</span>
+          </div>
+          <div class="line">
+            <span>In that enkindling blaze of fire...</span>
+          </div>
+          <div class="line">
+            <span>When, suddenly, he left her side;</span>
+          </div>
+          <div class="line">
+            <span>And started scrambling up the heap:</span>
+          </div>
+          <div class="line">
+            <span>And, looking up, with stifled cry,</span>
+          </div>
+          <div class="line">
+            <span>She saw, against the glowing sky,</span>
+          </div>
+          <div class="line">
+            <span>Almost upon the pit's red brink,</span>
+          </div>
+          <div class="line">
+            <span>A little lad, stock-still with fright</span>
+          </div>
+          <div class="line">
+            <span>Before the blazing pit of dread</span>
+          </div>
+          <div class="line">
+            <span>Agape before him in the night,</span>
+          </div>
+          <div class="line">
+            <span>Where, playing castles on the height</span>
+          </div>
+          <div class="line">
+            <span>Since noon, he'd fallen, spent, asleep</span>
+          </div>
+          <div class="line">
+            <span>And dreaming he was home in bed...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>With brain afire, too strained to think,</span>
+          </div>
+          <div class="line">
+            <span>She watched her lover climb and leap</span>
+          </div>
+          <div class="line">
+            <span>From jag to jag</span>
+          </div>
+          <div class="line">
+            <span>Of broken slag...</span>
+          </div>
+          <div class="line">
+            <span>And still he only seemed to creep...</span>
+          </div>
+          <div class="line">
+            <span>She felt that he would never reach</span>
+          </div>
+          <div class="line">
+            <span>That little lad, though he should climb</span>
+          </div>
+          <div class="line">
+            <span>Until the very end of time...</span>
+          </div>
+          <div class="line">
+            <span>And, as she looked, the burning breach</span>
+          </div>
+          <div class="line">
+            <span>Gaped suddenly more wide...</span>
+          </div>
+          <div class="line">
+            <span>The slag again began to slide,</span>
+          </div>
+          <div class="line">
+            <span>And crash into the pit,</span>
+          </div>
+          <div class="line">
+            <span>Until the dazed lad's feet</span>
+          </div>
+          <div class="line">
+            <span>Stood on the edge of it.</span>
+          </div>
+          <div class="line">
+            <span>She saw him reel and fall...</span>
+          </div>
+          <div class="line">
+            <span>And thought him done for ... then</span>
+          </div>
+          <div class="line">
+            <span>Her lover, brave and tall,</span>
+          </div>
+          <div class="line">
+            <span>Against the glare and heat,</span>
+          </div>
+          <div class="line">
+            <span>A very fire-bright god of men!</span>
+          </div>
+          <div class="line">
+            <span>He stooped ... and now she knew the lad</span>
+          </div>
+          <div class="line">
+            <span>Was safe with Robert, after all.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And while she watched, a throng of folk</span>
+          </div>
+          <div class="line">
+            <span>Attracted by the crash and flare,</span>
+          </div>
+          <div class="line">
+            <span>Had gathered round, though no one spoke</span>
+          </div>
+          <div class="line">
+            <span>But all stood terror-stricken there,</span>
+          </div>
+          <div class="line">
+            <span>With lifted eyes and indrawn breath,</span>
+          </div>
+          <div class="line">
+            <span>Until the lad was snatched from death</span>
+          </div>
+          <div class="line">
+            <span>Upon the very pit's edge, when,</span>
+          </div>
+          <div class="line">
+            <span>As Robert picked him up, and turned,</span>
+          </div>
+          <div class="line">
+            <span>A sigh ran through the crowd; and fear</span>
+          </div>
+          <div class="line">
+            <span>Gave place to joy, as cheer on cheer</span>
+          </div>
+          <div class="line">
+            <span>Sang through the kindled air...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>But still she never uttered word,</span>
+          </div>
+          <div class="line">
+            <span>As though she neither saw nor heard;</span>
+          </div>
+          <div class="line">
+            <span>Till as, at last, her lad drew near,</span>
+          </div>
+          <div class="line">
+            <span>She saw him bend with tender care</span>
+          </div>
+          <div class="line">
+            <span>Over the sobbing child who lay</span>
+          </div>
+          <div class="line">
+            <span>Safe in his arms, and hug him tight</span>
+          </div>
+          <div class="line">
+            <span>Against his breast--his brow alight</span>
+          </div>
+          <div class="line">
+            <span>With eager, loving eyes that burned</span>
+          </div>
+          <div class="line">
+            <span>In his transfigured face aflame...</span>
+          </div>
+          <div class="line">
+            <span>And even when the parents came</span>
+          </div>
+          <div class="line">
+            <span>It almost seemed that he was loth</span>
+          </div>
+          <div class="line">
+            <span>To yield them up their little son;</span>
+          </div>
+          <div class="line">
+            <span>As though the lad were his by right</span>
+          </div>
+          <div class="line">
+            <span>Of rescue, from the pit's edge won.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Then, as his eyes met hers, she felt</span>
+          </div>
+          <div class="line">
+            <span>An answering thrill of tenderness</span>
+          </div>
+          <div class="line">
+            <span>Run, quickening, through her breast; and both</span>
+          </div>
+          <div class="line">
+            <span>Stood quivering there, with envious eyes,</span>
+          </div>
+          <div class="line">
+            <span>And stricken with a strange distress,</span>
+          </div>
+          <div class="line">
+            <span>As quickly homeward through the night</span>
+          </div>
+          <div class="line">
+            <span>The happy parents bore their boy...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And then, about her reeling bright,</span>
+          </div>
+          <div class="line">
+            <span>The whole night seemed to her to melt</span>
+          </div>
+          <div class="line">
+            <span>In one fierce, fiery flood of joy.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="devil-s-edge"><span class="large">DEVIL'S EDGE</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>All night I lay on Devil's Edge,</span>
+          </div>
+          <div class="line">
+            <span>Along an overhanging ledge</span>
+          </div>
+          <div class="line">
+            <span>Between the sky and sea:</span>
+          </div>
+          <div class="line">
+            <span>And as I rested 'waiting sleep,</span>
+          </div>
+          <div class="line">
+            <span>The windless sky and soundless deep</span>
+          </div>
+          <div class="line">
+            <span>In one dim, blue infinity</span>
+          </div>
+          <div class="line">
+            <span>Of starry peace encompassed me.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And I remembered, drowsily,</span>
+          </div>
+          <div class="line">
+            <span>How 'mid the hills last night I 'd lain</span>
+          </div>
+          <div class="line">
+            <span>Beside a singing moorland burn;</span>
+          </div>
+          <div class="line">
+            <span>And waked at dawn, to feel the rain</span>
+          </div>
+          <div class="line">
+            <span>Fall on my face, as on the fern</span>
+          </div>
+          <div class="line">
+            <span>That drooped about my heather-bed:</span>
+          </div>
+          <div class="line">
+            <span>And how by noon the wind had blown</span>
+          </div>
+          <div class="line">
+            <span>The last grey shred from out the sky,</span>
+          </div>
+          <div class="line">
+            <span>And blew my homespun jacket dry,</span>
+          </div>
+          <div class="line">
+            <span>As I stood on the topmost stone</span>
+          </div>
+          <div class="line">
+            <span>That crowns the cairn on Hawkshaw Head,</span>
+          </div>
+          <div class="line">
+            <span>And caught a gleam of far-off sea;</span>
+          </div>
+          <div class="line">
+            <span>And heard the wind sing in the bent</span>
+          </div>
+          <div class="line">
+            <span>Like those far waters calling me:</span>
+          </div>
+          <div class="line">
+            <span>When, my heart answering to the call,</span>
+          </div>
+          <div class="line">
+            <span>I followed down the seaward stream,</span>
+          </div>
+          <div class="line">
+            <span>By silent pool and singing fall;</span>
+          </div>
+          <div class="line">
+            <span>Till with a quiet, keen content,</span>
+          </div>
+          <div class="line">
+            <span>I watched the sun, a crimson ball,</span>
+          </div>
+          <div class="line">
+            <span>Shoot through grey seas a fiery gleam,</span>
+          </div>
+          <div class="line">
+            <span>Then sink in opal deeps from sight.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And with the coming on of night,</span>
+          </div>
+          <div class="line">
+            <span>The wind had dropped: and as I lay,</span>
+          </div>
+          <div class="line">
+            <span>Retracing all the happy day,</span>
+          </div>
+          <div class="line">
+            <span>And gazing long and dreamily</span>
+          </div>
+          <div class="line">
+            <span>Across the dim, unsounding sea,</span>
+          </div>
+          <div class="line">
+            <span>Over the far horizon came</span>
+          </div>
+          <div class="line">
+            <span>A sudden sail of amber flame;</span>
+          </div>
+          <div class="line">
+            <span>And soon the new moon rode on high</span>
+          </div>
+          <div class="line">
+            <span>Through cloudless deeps of crystal sky.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Too holy seemed the night for sleep:</span>
+          </div>
+          <div class="line">
+            <span>And yet, I must have slept, it seems;</span>
+          </div>
+          <div class="line">
+            <span>For, suddenly, I woke to hear</span>
+          </div>
+          <div class="line">
+            <span>A strange voice singing, shrill and clear,</span>
+          </div>
+          <div class="line">
+            <span>Down in a gully black and deep</span>
+          </div>
+          <div class="line">
+            <span>That cleft the beetling crag in twain.</span>
+          </div>
+          <div class="line">
+            <span>It seemed the very voice of dreams</span>
+          </div>
+          <div class="line">
+            <span>That drive hag-ridden souls in fear</span>
+          </div>
+          <div class="line">
+            <span>Through echoing, unearthly vales,</span>
+          </div>
+          <div class="line">
+            <span>To plunge in black, slow-crawling streams,</span>
+          </div>
+          <div class="line">
+            <span>Seeking to drown that cry, in vain...</span>
+          </div>
+          <div class="line">
+            <span>Or some sea creature's voice that wails</span>
+          </div>
+          <div class="line">
+            <span>Through blind, white banks of fog unlifting</span>
+          </div>
+          <div class="line">
+            <span>To God-forgotten sailors drifting</span>
+          </div>
+          <div class="line">
+            <span>Rudderless to death...</span>
+          </div>
+          <div class="line">
+            <span>And as I heard,</span>
+          </div>
+          <div class="line">
+            <span>Though no wind stirred,</span>
+          </div>
+          <div class="line">
+            <span>An icy breath</span>
+          </div>
+          <div class="line">
+            <span>Was in my hair...</span>
+          </div>
+          <div class="line">
+            <span>And clutched my heart with cold despair...</span>
+          </div>
+          <div class="line">
+            <span>But, as the wild song died away,</span>
+          </div>
+          <div class="line">
+            <span>There came a faltering break</span>
+          </div>
+          <div class="line">
+            <span>That shivered to a sobbing fall;</span>
+          </div>
+          <div class="line">
+            <span>And seemed half-human, after all...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And yet, what foot could find a track</span>
+          </div>
+          <div class="line">
+            <span>In that deep gully, sheer and black...</span>
+          </div>
+          <div class="line">
+            <span>And singing wildly in the night!</span>
+          </div>
+          <div class="line">
+            <span>So, wondering I lay awake,</span>
+          </div>
+          <div class="line">
+            <span>Until the coming of the light</span>
+          </div>
+          <div class="line">
+            <span>Brought day's familiar presence back.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Down by the harbour-mouth that day,</span>
+          </div>
+          <div class="line">
+            <span>A fisher told the tale to me.</span>
+          </div>
+          <div class="line">
+            <span>Three months before, while out at sea,</span>
+          </div>
+          <div class="line">
+            <span>Young Philip Burn was lost, though how,</span>
+          </div>
+          <div class="line">
+            <span>None knew, and none would ever know.</span>
+          </div>
+          <div class="line">
+            <span>The boat becalmed at noonday lay...</span>
+          </div>
+          <div class="line">
+            <span>And not a ripple on the sea...</span>
+          </div>
+          <div class="line">
+            <span>And Philip standing in the bow,</span>
+          </div>
+          <div class="line">
+            <span>When his six comrades went below</span>
+          </div>
+          <div class="line">
+            <span>To sleep away an hour or so,</span>
+          </div>
+          <div class="line">
+            <span>Dog-tired with working day and night,</span>
+          </div>
+          <div class="line">
+            <span>While he kept watch ... and not a sound</span>
+          </div>
+          <div class="line">
+            <span>They heard, until, at set of sun</span>
+          </div>
+          <div class="line">
+            <span>They woke; and coming up, they found</span>
+          </div>
+          <div class="line">
+            <span>The deck was empty, Philip gone...</span>
+          </div>
+          <div class="line">
+            <span>Yet not another boat in sight...</span>
+          </div>
+          <div class="line">
+            <span>And not a ripple on the sea.</span>
+          </div>
+          <div class="line">
+            <span>How he had vanished, none could tell.</span>
+          </div>
+          <div class="line">
+            <span>They only knew the lad was dead</span>
+          </div>
+          <div class="line">
+            <span>They'd left but now, alive and well...</span>
+          </div>
+          <div class="line">
+            <span>And he, poor fellow, newly-wed...</span>
+          </div>
+          <div class="line">
+            <span>And when they broke the news to her,</span>
+          </div>
+          <div class="line">
+            <span>She spoke no word to anyone:</span>
+          </div>
+          <div class="line">
+            <span>But sat all day, and would not stir--</span>
+          </div>
+          <div class="line">
+            <span>Just staring, staring in the fire,</span>
+          </div>
+          <div class="line">
+            <span>With eyes that never seemed to tire;</span>
+          </div>
+          <div class="line">
+            <span>Until, at last, the day was done,</span>
+          </div>
+          <div class="line">
+            <span>And darkness came; when she would rise,</span>
+          </div>
+          <div class="line">
+            <span>And seek the door with queer, wild eyes;</span>
+          </div>
+          <div class="line">
+            <span>And wander singing all the night</span>
+          </div>
+          <div class="line">
+            <span>Unearthly songs beside the sea:</span>
+          </div>
+          <div class="line">
+            <span>But always the first blink of light</span>
+          </div>
+          <div class="line">
+            <span>Would find her back at her own door.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>'Twas Winter when I came once more</span>
+          </div>
+          <div class="line">
+            <span>To that old village by the shore:</span>
+          </div>
+          <div class="line">
+            <span>And as, at night, I climbed the street,</span>
+          </div>
+          <div class="line">
+            <span>I heard a singing, low and sweet,</span>
+          </div>
+          <div class="line">
+            <span>Within a cottage near at hand:</span>
+          </div>
+          <div class="line">
+            <span>And I was glad awhile to stand</span>
+          </div>
+          <div class="line">
+            <span>And listen by the glowing pane:</span>
+          </div>
+          <div class="line">
+            <span>And as I hearkened, that sweet strain</span>
+          </div>
+          <div class="line">
+            <span>Brought back the night when I had lain</span>
+          </div>
+          <div class="line">
+            <span>Awake on Devil's Edge...</span>
+          </div>
+          <div class="line">
+            <span>And now I knew the voice again,</span>
+          </div>
+          <div class="line">
+            <span>So different, free of pain and fear--</span>
+          </div>
+          <div class="line">
+            <span>Its terror turned to tenderness--</span>
+          </div>
+          <div class="line">
+            <span>And yet the same voice none the less,</span>
+          </div>
+          <div class="line">
+            <span>Though singing now so true and clear</span>
+          </div>
+          <div class="line">
+            <span>And drawing nigh the window-ledge,</span>
+          </div>
+          <div class="line">
+            <span>I watched the mother sing to rest</span>
+          </div>
+          <div class="line">
+            <span>The baby snuggling to her breast.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-lilac-tree"><span class="large">THE LILAC TREE</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"I planted her the lilac tree</span>
+          </div>
+          <div class="line">
+            <span>Upon our wedding day:</span>
+          </div>
+          <div class="line">
+            <span>But, when the time of blossom came,</span>
+          </div>
+          <div class="line">
+            <span>With her dead babe she lay...</span>
+          </div>
+          <div class="line">
+            <span>And, as I stood beside the bed,</span>
+          </div>
+          <div class="line">
+            <span>The scent of lilac filled the room:</span>
+          </div>
+          <div class="line">
+            <span>And always when I smell the bloom,</span>
+          </div>
+          <div class="line">
+            <span>I think upon the dead."</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>He spoke: and, speaking, sauntered on,</span>
+          </div>
+          <div class="line">
+            <span>The young girl by his side:</span>
+          </div>
+          <div class="line">
+            <span>And then they talked no more of death,</span>
+          </div>
+          <div class="line">
+            <span>But only of the happy things</span>
+          </div>
+          <div class="line">
+            <span>That burst their buds, and spread their wings,</span>
+          </div>
+          <div class="line">
+            <span>And break in song at Whitsuntide,</span>
+          </div>
+          <div class="line">
+            <span>That burst to bloom at Whitsuntide,</span>
+          </div>
+          <div class="line">
+            <span>And bring the summer in a breath.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And, as they talked, the young girl's life</span>
+          </div>
+          <div class="line">
+            <span>Broke into bloom and song;</span>
+          </div>
+          <div class="line">
+            <span>And, one with all the happy things</span>
+          </div>
+          <div class="line">
+            <span>That burst their buds, and spread their wings,</span>
+          </div>
+          <div class="line">
+            <span>Her very blood was singing,</span>
+          </div>
+          <div class="line">
+            <span>And at her pulses ringing;</span>
+          </div>
+          <div class="line">
+            <span>Life tingled through her, sweet and strong,</span>
+          </div>
+          <div class="line">
+            <span>From secret sources springing:</span>
+          </div>
+          <div class="line">
+            <span>And, all at once, a quickening strife</span>
+          </div>
+          <div class="line">
+            <span>Of hopes and fears was in her heart,</span>
+          </div>
+          <div class="line">
+            <span>Where only wondering joy had been;</span>
+          </div>
+          <div class="line">
+            <span>And, kindling with a sudden light,</span>
+          </div>
+          <div class="line">
+            <span>Her eyes had sight</span>
+          </div>
+          <div class="line">
+            <span>Of things unseen:</span>
+          </div>
+          <div class="line">
+            <span>And, in a flash, a woman grown,</span>
+          </div>
+          <div class="line">
+            <span>With pangs of knowledge, fierce and keen,</span>
+          </div>
+          <div class="line">
+            <span>She knew strange things unknown.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>A year went by: at Whitsuntide,</span>
+          </div>
+          <div class="line">
+            <span>He brought her home, a bride.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>He planted her no lilac tree</span>
+          </div>
+          <div class="line">
+            <span>Upon their wedding day:</span>
+          </div>
+          <div class="line">
+            <span>And strange distress came over her,</span>
+          </div>
+          <div class="line">
+            <span>As on the bed she lay:</span>
+          </div>
+          <div class="line">
+            <span>For as he stood beside the bed,</span>
+          </div>
+          <div class="line">
+            <span>The scent of lilac filled the room.</span>
+          </div>
+          <div class="line">
+            <span>Her heart knew well he smelt the bloom,</span>
+          </div>
+          <div class="line">
+            <span>And thought upon the dead.</span>
+          </div>
+          <div class="line">
+            <span>Yet, she was glad to be his wife:</span>
+          </div>
+          <div class="line">
+            <span>And when the blossom-time was past,</span>
+          </div>
+          <div class="line">
+            <span>Her days no more were overcast;</span>
+          </div>
+          <div class="line">
+            <span>And deep she drank of life:</span>
+          </div>
+          <div class="line">
+            <span>And, thronged with happy household cares,</span>
+          </div>
+          <div class="line">
+            <span>Her busy days went pleasantly:</span>
+          </div>
+          <div class="line">
+            <span>Her foot was light upon the stairs;</span>
+          </div>
+          <div class="line">
+            <span>And every room rang merrily,</span>
+          </div>
+          <div class="line">
+            <span>And merrily, and merrily,</span>
+          </div>
+          <div class="line">
+            <span>With song and mirth, for unto her</span>
+          </div>
+          <div class="line">
+            <span>His heart seemed hers, and hers alone:</span>
+          </div>
+          <div class="line">
+            <span>Until new dreams began to stir</span>
+          </div>
+          <div class="line">
+            <span>Her wondering breast with bliss unknown</span>
+          </div>
+          <div class="line">
+            <span>Of some new miracle to be:</span>
+          </div>
+          <div class="line">
+            <span>And, though she moved more quietly,</span>
+          </div>
+          <div class="line">
+            <span>And seldom sang, yet, happily,</span>
+          </div>
+          <div class="line">
+            <span>From happy dawn to happy night</span>
+          </div>
+          <div class="line">
+            <span>The mother's eyes shone bright.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>But, as her time drew near,</span>
+          </div>
+          <div class="line">
+            <span>Her heart was filled with fear:</span>
+          </div>
+          <div class="line">
+            <span>And when the lilac burst to bloom,</span>
+          </div>
+          <div class="line">
+            <span>And brought the Summer in a breath,</span>
+          </div>
+          <div class="line">
+            <span>A presence seemed to fill the room,</span>
+          </div>
+          <div class="line">
+            <span>And fill her heart with death:</span>
+          </div>
+          <div class="line">
+            <span>And, as her husband lay asleep,</span>
+          </div>
+          <div class="line">
+            <span>Beside her, on the bed,</span>
+          </div>
+          <div class="line">
+            <span>Into her breast the thought would creep</span>
+          </div>
+          <div class="line">
+            <span>That he was dreaming of the dead.</span>
+          </div>
+          <div class="line">
+            <span>And all the mother's heart in her</span>
+          </div>
+          <div class="line">
+            <span>Was mad with mother-jealousy</span>
+          </div>
+          <div class="line">
+            <span>Of that sweet scented lilac tree;</span>
+          </div>
+          <div class="line">
+            <span>And, blind with savage ecstasy,</span>
+          </div>
+          <div class="line">
+            <span>Night after night she lay,</span>
+          </div>
+          <div class="line">
+            <span>Until the blink of day,</span>
+          </div>
+          <div class="line">
+            <span>With staring eyes and wild,</span>
+          </div>
+          <div class="line">
+            <span>Half-crazy, lest the lilac tree</span>
+          </div>
+          <div class="line">
+            <span>Should come betwixt him and his child.</span>
+          </div>
+          <div class="line">
+            <span>By day, her mother-tenderness</span>
+          </div>
+          <div class="line">
+            <span>Was turned to brooding bitterness,</span>
+          </div>
+          <div class="line">
+            <span>Whene'er she looked upon the bloom:</span>
+          </div>
+          <div class="line">
+            <span>And, if she slept at all at night,</span>
+          </div>
+          <div class="line">
+            <span>Her heart would waken in affright</span>
+          </div>
+          <div class="line">
+            <span>To smell the lilac in the gloom:</span>
+          </div>
+          <div class="line">
+            <span>And, when it rained, it seemed to her,</span>
+          </div>
+          <div class="line">
+            <span>The fresh keen scent was bitterer:</span>
+          </div>
+          <div class="line">
+            <span>Though, when the blaze of morning came,</span>
+          </div>
+          <div class="line">
+            <span>And flooded all the room,</span>
+          </div>
+          <div class="line">
+            <span>The perfume burnt her heart like flame.</span>
+          </div>
+          <div class="line">
+            <span>As, in the dark,</span>
+          </div>
+          <div class="line">
+            <span>One night she lay,</span>
+          </div>
+          <div class="line">
+            <span>A dark thought shot</span>
+          </div>
+          <div class="line">
+            <span>Through her hot heart:</span>
+          </div>
+          <div class="line">
+            <span>And, from a spark</span>
+          </div>
+          <div class="line">
+            <span>Of smouldering wrong,</span>
+          </div>
+          <div class="line">
+            <span>Hate burst to fire.</span>
+          </div>
+          <div class="line">
+            <span>Now, quaking cold,</span>
+          </div>
+          <div class="line">
+            <span>Now, quivering hot,</span>
+          </div>
+          <div class="line">
+            <span>With breath indrawn,</span>
+          </div>
+          <div class="line">
+            <span>Through time untold,</span>
+          </div>
+          <div class="line">
+            <span>She 'waited dawn</span>
+          </div>
+          <div class="line">
+            <span>That lagged too long</span>
+          </div>
+          <div class="line">
+            <span>For her desire.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And when, at last, at break of day,</span>
+          </div>
+          <div class="line">
+            <span>Her husband rose, and went his way</span>
+          </div>
+          <div class="line">
+            <span>About his daily toil,</span>
+          </div>
+          <div class="line">
+            <span>She, too, arose, and dressed,</span>
+          </div>
+          <div class="line">
+            <span>With frenzy in her breast;</span>
+          </div>
+          <div class="line">
+            <span>And stole downstairs, and took a spade,</span>
+          </div>
+          <div class="line">
+            <span>And digged about the lilac roots,</span>
+          </div>
+          <div class="line">
+            <span>And laid them bare of soil:</span>
+          </div>
+          <div class="line">
+            <span>Then, with a jagged blade,</span>
+          </div>
+          <div class="line">
+            <span>She hacked and slashed the naked roots--</span>
+          </div>
+          <div class="line">
+            <span>She hacked and slashed with frantic hand,</span>
+          </div>
+          <div class="line">
+            <span>Until the lilac scarce might stand;</span>
+          </div>
+          <div class="line">
+            <span>And then again the soil she laid</span>
+          </div>
+          <div class="line">
+            <span>About the bleeding roots--</span>
+          </div>
+          <div class="line">
+            <span>(It seemed to her, the sap ran red</span>
+          </div>
+          <div class="line">
+            <span>About the writhing roots!)</span>
+          </div>
+          <div class="line">
+            <span>But, now her heart was eased of strife,</span>
+          </div>
+          <div class="line">
+            <span>Since she had sapped the lilac's life;</span>
+          </div>
+          <div class="line">
+            <span>And, frenzy-spent, she dropped the knife:</span>
+          </div>
+          <div class="line">
+            <span>Then, dizzily she crept to bed,</span>
+          </div>
+          <div class="line">
+            <span>And lay all day as one nigh dead.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>That night a sudden storm awoke,</span>
+          </div>
+          <div class="line">
+            <span>And struck the slumbering earth to life:</span>
+          </div>
+          <div class="line">
+            <span>And, as the heavens in thunder broke,</span>
+          </div>
+          <div class="line">
+            <span>She lay exulting in the strife</span>
+          </div>
+          <div class="line">
+            <span>Of flash and peal,</span>
+          </div>
+          <div class="line">
+            <span>And gust and rain;</span>
+          </div>
+          <div class="line">
+            <span>For now, she thought: the lightning-stroke</span>
+          </div>
+          <div class="line">
+            <span>Will lay the lilac low;</span>
+          </div>
+          <div class="line">
+            <span>And he need never know</span>
+          </div>
+          <div class="line">
+            <span>How I ... and then, again,</span>
+          </div>
+          <div class="line">
+            <span>Her heart went cold with dread,</span>
+          </div>
+          <div class="line">
+            <span>As she remembered that the knife</span>
+          </div>
+          <div class="line">
+            <span>Still lay beneath the lilac tree...</span>
+          </div>
+          <div class="line">
+            <span>A blinding flash,</span>
+          </div>
+          <div class="line">
+            <span>A lull, a crash,</span>
+          </div>
+          <div class="line">
+            <span>A rattling peal...</span>
+          </div>
+          <div class="line">
+            <span>And suddenly,</span>
+          </div>
+          <div class="line">
+            <span>She felt her senses reel:</span>
+          </div>
+          <div class="line">
+            <span>And, crying out: "The knife! The knife!"</span>
+          </div>
+          <div class="line">
+            <span>Her pangs were on her...</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Dawn was red,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>When she awoke upon the bed</span>
+          </div>
+          <div class="line">
+            <span>To life--and knew her babe was dead.</span>
+          </div>
+          <div class="line">
+            <span>She rose: and cried out fearfully:</span>
+          </div>
+          <div class="line">
+            <span>"The lilac tree! The lilac tree!"</span>
+          </div>
+          <div class="line">
+            <span>Then fell back in a swoon.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>But, when she waked again at noon,</span>
+          </div>
+          <div class="line">
+            <span>And looked upon her sleeping child;</span>
+          </div>
+          <div class="line">
+            <span>And laid her hand upon its head,</span>
+          </div>
+          <div class="line">
+            <span>No more the mother's heart was wild,</span>
+          </div>
+          <div class="line">
+            <span>For hate and fear were dead;</span>
+          </div>
+          <div class="line">
+            <span>And all her brooding bitterness</span>
+          </div>
+          <div class="line">
+            <span>Broke into tears of tenderness.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And, not a word the father said</span>
+          </div>
+          <div class="line">
+            <span>About the lilac, lying dead.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>A week went by, and Whitsuntide</span>
+          </div>
+          <div class="line">
+            <span>Came round: and, as she lay,</span>
+          </div>
+          <div class="line">
+            <span>And looked upon the newborn day,</span>
+          </div>
+          <div class="line">
+            <span>Her husband, lying by her side,</span>
+          </div>
+          <div class="line">
+            <span>Spoke to her very tenderly:</span>
+          </div>
+          <div class="line">
+            <span>"Wife, 'tis again our wedding day,</span>
+          </div>
+          <div class="line">
+            <span>And we will plant a lilac tree</span>
+          </div>
+          <div class="line">
+            <span>In memory of the babe that died."</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>They planted a white lilac tree</span>
+          </div>
+          <div class="line">
+            <span>Upon their wedding day:</span>
+          </div>
+          <div class="line">
+            <span>And, when the time of blossom came,</span>
+          </div>
+          <div class="line">
+            <span>With kindly hearts they lay.</span>
+          </div>
+          <div class="line">
+            <span>The sunlight streamed upon the bed:</span>
+          </div>
+          <div class="line">
+            <span>The scent of lilac filled the room:</span>
+          </div>
+          <div class="line">
+            <span>And, as they smelt the breathing bloom,</span>
+          </div>
+          <div class="line">
+            <span>They thought upon the dead.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-old-man"><span class="large">THE OLD MAN</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>The boat put in at dead of night;</span>
+          </div>
+          <div class="line">
+            <span>And, when I reached the house, 'twas sleeping dark.</span>
+          </div>
+          <div class="line">
+            <span>I knew my gentlest tap would be a spark</span>
+          </div>
+          <div class="line">
+            <span>To set my home alight:</span>
+          </div>
+          <div class="line">
+            <span>My mother ever listening in her sleep</span>
+          </div>
+          <div class="line">
+            <span>For my returning step, would leap</span>
+          </div>
+          <div class="line">
+            <span>Awake with welcome; and my father's eyes</span>
+          </div>
+          <div class="line">
+            <span>Would twinkle merrily to greet me;</span>
+          </div>
+          <div class="line">
+            <span>And my young sister would run down to meet me</span>
+          </div>
+          <div class="line">
+            <span>With sleepy sweet surprise.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And yet, awhile, I lingered</span>
+          </div>
+          <div class="line">
+            <span>Upon the threshold, listening;</span>
+          </div>
+          <div class="line">
+            <span>And watched the cold stars glistening,</span>
+          </div>
+          <div class="line">
+            <span>And seemed to hear the deep</span>
+          </div>
+          <div class="line">
+            <span>Calm breathing of the house asleep--</span>
+          </div>
+          <div class="line">
+            <span>In easy sleep, so deep, I almost feared to break it;</span>
+          </div>
+          <div class="line">
+            <span>And, even as I fingered</span>
+          </div>
+          <div class="line">
+            <span>The knocker, loth to wake it,</span>
+          </div>
+          <div class="line">
+            <span>Like some uncanny inkling</span>
+          </div>
+          <div class="line">
+            <span>Of news from otherwhere,</span>
+          </div>
+          <div class="line">
+            <span>I felt a cold breath in my hair,</span>
+          </div>
+          <div class="line">
+            <span>As though, with chin upon my shoulder,</span>
+          </div>
+          <div class="line">
+            <span>One waited hard, upon my heel,</span>
+          </div>
+          <div class="line">
+            <span>With pricking eyes of steel,</span>
+          </div>
+          <div class="line">
+            <span>Though well I knew that not a soul was there.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Until, at last, grown bolder,</span>
+          </div>
+          <div class="line">
+            <span>I rapped; and in a twinkling,</span>
+          </div>
+          <div class="line">
+            <span>The house was all afire</span>
+          </div>
+          <div class="line">
+            <span>With welcome in the night:</span>
+          </div>
+          <div class="line">
+            <span>First, in my mother's room, a light;</span>
+          </div>
+          <div class="line">
+            <span>And then, her foot upon the stair;</span>
+          </div>
+          <div class="line">
+            <span>A bolt shot back; a candle's flare:</span>
+          </div>
+          <div class="line">
+            <span>A happy cry; and to her breast</span>
+          </div>
+          <div class="line">
+            <span>She hugged her heart's desire:</span>
+          </div>
+          <div class="line">
+            <span>And hushed her fears to rest.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Then, shivering in the keen night air,</span>
+          </div>
+          <div class="line">
+            <span>My sleepy sister, laughing came;</span>
+          </div>
+          <div class="line">
+            <span>And drew us in: and stirred to flame</span>
+          </div>
+          <div class="line">
+            <span>The smouldering kitchen-fire; and set</span>
+          </div>
+          <div class="line">
+            <span>The kettle on the kindling red:</span>
+          </div>
+          <div class="line">
+            <span>And, as I watched the homely blaze,</span>
+          </div>
+          <div class="line">
+            <span>And thought of wandering days</span>
+          </div>
+          <div class="line">
+            <span>With sharp regret;</span>
+          </div>
+          <div class="line">
+            <span>I missed my father: then I heard</span>
+          </div>
+          <div class="line">
+            <span>How he was still a-bed;</span>
+          </div>
+          <div class="line">
+            <span>And had been ailing, for a day or so;</span>
+          </div>
+          <div class="line">
+            <span>But, now was waking, if I'd go...</span>
+          </div>
+          <div class="line">
+            <span>My foot already on the stair,</span>
+          </div>
+          <div class="line">
+            <span>In answer to my mother's word</span>
+          </div>
+          <div class="line">
+            <span>I turned; and saw in dull amaze,</span>
+          </div>
+          <div class="line">
+            <span>Behind her, as she stood all unaware,</span>
+          </div>
+          <div class="line">
+            <span>An old man sitting in my father's chair.</span>
+          </div>
+          <div class="line">
+            <span>A strange old man ... yet, as I looked at him,</span>
+          </div>
+          <div class="line">
+            <span>Before my eyes, a dim</span>
+          </div>
+          <div class="line">
+            <span>Remembrance seemed to swim</span>
+          </div>
+          <div class="line">
+            <span>Of some old man, who'd lurked about the boat,</span>
+          </div>
+          <div class="line">
+            <span>While we were still at sea;</span>
+          </div>
+          <div class="line">
+            <span>And who had crouched beside me, at the oar,</span>
+          </div>
+          <div class="line">
+            <span>As we had rowed ashore;</span>
+          </div>
+          <div class="line">
+            <span>Though, at the time, I'd taken little note,</span>
+          </div>
+          <div class="line">
+            <span>I felt I'd seen that strange old man before:</span>
+          </div>
+          <div class="line">
+            <span>But, how he'd come to follow me,</span>
+          </div>
+          <div class="line">
+            <span>Unknown...</span>
+          </div>
+          <div class="line">
+            <span>And to be sitting there...</span>
+          </div>
+          <div class="line">
+            <span>Then I recalled the cold breath in my hair,</span>
+          </div>
+          <div class="line">
+            <span>When I had stood, alone,</span>
+          </div>
+          <div class="line">
+            <span>Before the bolted door.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And now my mother, wondering sore</span>
+          </div>
+          <div class="line">
+            <span>To see me stare and stare,</span>
+          </div>
+          <div class="line">
+            <span>So strangely, at an empty chair,</span>
+          </div>
+          <div class="line">
+            <span>Turned, too; and saw the old man there.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And as she turned, he slowly raised</span>
+          </div>
+          <div class="line">
+            <span>His drooping head;</span>
+          </div>
+          <div class="line">
+            <span>And looked upon her with her husband's eyes.</span>
+          </div>
+          <div class="line">
+            <span>She stood, a moment, dazed;</span>
+          </div>
+          <div class="line">
+            <span>And watched him slowly rise,</span>
+          </div>
+          <div class="line">
+            <span>As though to come to her:</span>
+          </div>
+          <div class="line">
+            <span>Then, with a cry, she sped</span>
+          </div>
+          <div class="line">
+            <span>Upstairs, ere I could stir.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Still dazed, I let her go, alone:</span>
+          </div>
+          <div class="line">
+            <span>I heard her footstep overhead:</span>
+          </div>
+          <div class="line">
+            <span>I heard her drop beside the bed,</span>
+          </div>
+          <div class="line">
+            <span>With low forsaken moan.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Yet, I could only stare and stare</span>
+          </div>
+          <div class="line">
+            <span>Upon my father's empty chair.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="the-hare"><span class="large">THE HARE</span></p>
+    <div class="vspace" style="height: 1em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>My hands were hot upon a hare,</span>
+          </div>
+          <div class="line">
+            <span>Half-strangled, struggling in a snare--</span>
+          </div>
+          <div class="line">
+            <span>My knuckles at her warm wind-pipe--</span>
+          </div>
+          <div class="line">
+            <span>When suddenly, her eyes shot back,</span>
+          </div>
+          <div class="line">
+            <span>Big, fearful, staggering and black:</span>
+          </div>
+          <div class="line">
+            <span>And, ere I knew, my grip was slack;</span>
+          </div>
+          <div class="line">
+            <span>And I was clutching empty air,</span>
+          </div>
+          <div class="line">
+            <span>Half-mad, half-glad at my lost luck...</span>
+          </div>
+          <div class="line">
+            <span>When I awoke beside the stack.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>'Twas just the minute when the snipe,</span>
+          </div>
+          <div class="line">
+            <span>As though clock-wakened, every jack,</span>
+          </div>
+          <div class="line">
+            <span>An hour ere dawn, dart in and out</span>
+          </div>
+          <div class="line">
+            <span>The mist-wreaths filling syke and slack,</span>
+          </div>
+          <div class="line">
+            <span>And flutter wheeling round about,</span>
+          </div>
+          <div class="line">
+            <span>And drumming out the Summer night.</span>
+          </div>
+          <div class="line">
+            <span>I lay star-gazing yet a bit;</span>
+          </div>
+          <div class="line">
+            <span>Then, chilly-skinned, I sat upright,</span>
+          </div>
+          <div class="line">
+            <span>To shrug the shivers from my back;</span>
+          </div>
+          <div class="line">
+            <span>And, drawing out a straw to suck,</span>
+          </div>
+          <div class="line">
+            <span>My teeth nipped through it at a bite...</span>
+          </div>
+          <div class="line">
+            <span>The liveliest lad is out of pluck</span>
+          </div>
+          <div class="line">
+            <span>An hour ere dawn--a tame cock-sparrow--</span>
+          </div>
+          <div class="line">
+            <span>When cold stars shiver through his marrow,</span>
+          </div>
+          <div class="line">
+            <span>And wet mist soaks his mother-wit.</span>
+          </div>
+          <div class="line">
+            <span>But, as the snipe dropped, one by one;</span>
+          </div>
+          <div class="line">
+            <span>And one by one the stars blinked out;</span>
+          </div>
+          <div class="line">
+            <span>I knew 'twould only need the sun</span>
+          </div>
+          <div class="line">
+            <span>To send the shudders right about:</span>
+          </div>
+          <div class="line">
+            <span>And, as the clear East faded white,</span>
+          </div>
+          <div class="line">
+            <span>I watched and wearied for the sun--</span>
+          </div>
+          <div class="line">
+            <span>The jolly, welcome, friendly sun--</span>
+          </div>
+          <div class="line">
+            <span>The sleepy sluggard of a sun</span>
+          </div>
+          <div class="line">
+            <span>That still kept snoozing out of sight,</span>
+          </div>
+          <div class="line">
+            <span>Though well he knew the night was done</span>
+          </div>
+          <div class="line">
+            <span>And, after all, he caught me dozing,</span>
+          </div>
+          <div class="line">
+            <span>And leapt up, laughing, in the sky</span>
+          </div>
+          <div class="line">
+            <span>Just as my lazy eyes were closing:</span>
+          </div>
+          <div class="line">
+            <span>And it was good as gold to lie</span>
+          </div>
+          <div class="line">
+            <span>Full-length among the straw, and feel</span>
+          </div>
+          <div class="line">
+            <span>The day wax warmer every minute,</span>
+          </div>
+          <div class="line">
+            <span>As, glowing glad, from head to heel,</span>
+          </div>
+          <div class="line">
+            <span>I soaked and rolled rejoicing in it...</span>
+          </div>
+          <div class="line">
+            <span>When from the corner of my eye,</span>
+          </div>
+          <div class="line">
+            <span>Upon a heathery knowe hard-by,</span>
+          </div>
+          <div class="line">
+            <span>With long lugs cocked, and eyes astare,</span>
+          </div>
+          <div class="line">
+            <span>Yet all serene, I saw a hare.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Upon my belly in the straw,</span>
+          </div>
+          <div class="line">
+            <span>I lay, and watched her sleek her fur,</span>
+          </div>
+          <div class="line">
+            <span>As, daintily, with well-licked paw,</span>
+          </div>
+          <div class="line">
+            <span>She washed her face and neck and ears:</span>
+          </div>
+          <div class="line">
+            <span>Then, clean and comely in the sun,</span>
+          </div>
+          <div class="line">
+            <span>She kicked her heels up, full of fun,</span>
+          </div>
+          <div class="line">
+            <span>As if she did not care a pin</span>
+          </div>
+          <div class="line">
+            <span>Though she should jump out of her skin,</span>
+          </div>
+          <div class="line">
+            <span>And leapt and lolloped, free of fears,</span>
+          </div>
+          <div class="line">
+            <span>Until my heart frisked round with her.</span>
+          </div>
+          <div class="line">
+            <span>"And yet, if I but lift my head,</span>
+          </div>
+          <div class="line">
+            <span>You'll scamper off, young Puss," I said.</span>
+          </div>
+          <div class="line">
+            <span>"Still, I can't lie, and watch you play,</span>
+          </div>
+          <div class="line">
+            <span>Upon my belly half-the-day.</span>
+          </div>
+          <div class="line">
+            <span>The Lord alone knows where I'm going:</span>
+          </div>
+          <div class="line">
+            <span>But, I had best be getting there.</span>
+          </div>
+          <div class="line">
+            <span>Last night I loosed you from the snare--</span>
+          </div>
+          <div class="line">
+            <span>Asleep, or waking, who's for knowing!--</span>
+          </div>
+          <div class="line">
+            <span>So, I shall thank you now for showing</span>
+          </div>
+          <div class="line">
+            <span>Which art to take to bring me where</span>
+          </div>
+          <div class="line">
+            <span>My luck awaits me. When you're ready</span>
+          </div>
+          <div class="line">
+            <span>To start, I'll follow on your track.</span>
+          </div>
+          <div class="line">
+            <span>Though slow of foot, I'm sure and steady..."</span>
+          </div>
+          <div class="line">
+            <span>She pricked her ears, then set them back;</span>
+          </div>
+          <div class="line">
+            <span>And like a shot was out of sight:</span>
+          </div>
+          <div class="line">
+            <span>And, with a happy heart and light,</span>
+          </div>
+          <div class="line">
+            <span>As quickly I was on my feet;</span>
+          </div>
+          <div class="line">
+            <span>And following the way she went,</span>
+          </div>
+          <div class="line">
+            <span>Keen as a lurcher on the scent,</span>
+          </div>
+          <div class="line">
+            <span>Across the heather and the bent,</span>
+          </div>
+          <div class="line">
+            <span>Across the quaking moss and peat.</span>
+          </div>
+          <div class="line">
+            <span>Of course, I lost her soon enough,</span>
+          </div>
+          <div class="line">
+            <span>For moorland tracks are steep and rough;</span>
+          </div>
+          <div class="line">
+            <span>And hares are made of nimbler stuff</span>
+          </div>
+          <div class="line">
+            <span>Than any lad of seventeen,</span>
+          </div>
+          <div class="line">
+            <span>However lanky-legged and tough,</span>
+          </div>
+          <div class="line">
+            <span>However, kestrel-eyed and keen:</span>
+          </div>
+          <div class="line">
+            <span>And I'd at last to stop and eat</span>
+          </div>
+          <div class="line">
+            <span>The little bit of bread and meat</span>
+          </div>
+          <div class="line">
+            <span>Left in my pocket overnight.</span>
+          </div>
+          <div class="line">
+            <span>So, in a hollow, snug and green,</span>
+          </div>
+          <div class="line">
+            <span>I sat beside a burn, and dipped</span>
+          </div>
+          <div class="line">
+            <span>The dry bread in an icy pool;</span>
+          </div>
+          <div class="line">
+            <span>And munched a breakfast fresh and cool...</span>
+          </div>
+          <div class="line">
+            <span>And then sat gaping like a fool...</span>
+          </div>
+          <div class="line">
+            <span>For, right before my very eyes,</span>
+          </div>
+          <div class="line">
+            <span>With lugs acock, and eyes astare,</span>
+          </div>
+          <div class="line">
+            <span>I saw again the selfsame hare.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>So, up I jumped, and off she slipped:</span>
+          </div>
+          <div class="line">
+            <span>And I kept sight of her until</span>
+          </div>
+          <div class="line">
+            <span>I stumbled in a hole, and tripped;</span>
+          </div>
+          <div class="line">
+            <span>And came a heavy, headlong spill:</span>
+          </div>
+          <div class="line">
+            <span>And she, ere I'd the wit to rise,</span>
+          </div>
+          <div class="line">
+            <span>Was o'er the hill, and out of sight:</span>
+          </div>
+          <div class="line">
+            <span>And, sore and shaken with the tumbling,</span>
+          </div>
+          <div class="line">
+            <span>And sicker at my foot for stumbling,</span>
+          </div>
+          <div class="line">
+            <span>I cursed my luck, and went on, grumbling,</span>
+          </div>
+          <div class="line">
+            <span>The way her flying heels had fled.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>The sky was cloudless overhead;</span>
+          </div>
+          <div class="line">
+            <span>And just alive with larks asinging:</span>
+          </div>
+          <div class="line">
+            <span>And, in a twinkling, I was swinging</span>
+          </div>
+          <div class="line">
+            <span>Across the windy hills, lighthearted.</span>
+          </div>
+          <div class="line">
+            <span>A kestrel at my footstep started,</span>
+          </div>
+          <div class="line">
+            <span>Just pouncing on a frightened mouse,</span>
+          </div>
+          <div class="line">
+            <span>And hung o'erhead with wings a-hover:</span>
+          </div>
+          <div class="line">
+            <span>Through rustling heath an adder darted:</span>
+          </div>
+          <div class="line">
+            <span>A hundred rabbits bobbed to cover:</span>
+          </div>
+          <div class="line">
+            <span>A weasel, sleek and rusty-red,</span>
+          </div>
+          <div class="line">
+            <span>Popped out of sight as quick as winking:</span>
+          </div>
+          <div class="line">
+            <span>I saw a grizzled vixen slinking</span>
+          </div>
+          <div class="line">
+            <span>Behind a clucking brood of grouse</span>
+          </div>
+          <div class="line">
+            <span>That rose and cackled at my coming:</span>
+          </div>
+          <div class="line">
+            <span>And all about my way were flying</span>
+          </div>
+          <div class="line">
+            <span>The peewit, with their slow wings creaking</span>
+          </div>
+          <div class="line">
+            <span>And little jack-snipe darted, drumming:</span>
+          </div>
+          <div class="line">
+            <span>And now and then a golden plover</span>
+          </div>
+          <div class="line">
+            <span>Or redshank piped with reedy whistle.</span>
+          </div>
+          <div class="line">
+            <span>But never shaken bent or thistle</span>
+          </div>
+          <div class="line">
+            <span>Betrayed the quarry I was seeking</span>
+          </div>
+          <div class="line">
+            <span>And not an instant, anywhere</span>
+          </div>
+          <div class="line">
+            <span>Did I clap eyes upon a hare.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>So, travelling still, the twilight caught me:</span>
+          </div>
+          <div class="line">
+            <span>And as I stumbled on, I muttered:</span>
+          </div>
+          <div class="line">
+            <span>"A deal of luck the hare has brought me!</span>
+          </div>
+          <div class="line">
+            <span>The wind and I must spend together</span>
+          </div>
+          <div class="line">
+            <span>A hungry night among the heather.</span>
+          </div>
+          <div class="line">
+            <span>If I'd her here..." And as I uttered,</span>
+          </div>
+          <div class="line">
+            <span>I tripped, and heard a frightened squeal;</span>
+          </div>
+          <div class="line">
+            <span>And dropped my hands in time to feel</span>
+          </div>
+          <div class="line">
+            <span>The hare just bolting 'twixt my feet.</span>
+          </div>
+          <div class="line">
+            <span>She slipped my clutch: and I stood there</span>
+          </div>
+          <div class="line">
+            <span>And cursed that devil-littered hare,</span>
+          </div>
+          <div class="line">
+            <span>That left me stranded in the dark</span>
+          </div>
+          <div class="line">
+            <span>In that wide waste of quaggy peat</span>
+          </div>
+          <div class="line">
+            <span>Beneath black night without a spark:</span>
+          </div>
+          <div class="line">
+            <span>When, looking up, I saw a flare</span>
+          </div>
+          <div class="line">
+            <span>Upon a far-off hill, and said:</span>
+          </div>
+          <div class="line">
+            <span>"By God, the heather is afire!</span>
+          </div>
+          <div class="line">
+            <span>It's mischief at this time of year..."</span>
+          </div>
+          <div class="line">
+            <span>And then, as one bright flame shot higher,</span>
+          </div>
+          <div class="line">
+            <span>And booths and vans stood out quite clear;</span>
+          </div>
+          <div class="line">
+            <span>My wits came back into my head:</span>
+          </div>
+          <div class="line">
+            <span>And I remembered Brough Hill Fair.</span>
+          </div>
+          <div class="line">
+            <span>And, as I stumbled towards the glare,</span>
+          </div>
+          <div class="line">
+            <span>I knew the sudden kindling meant</span>
+          </div>
+          <div class="line">
+            <span>The Fair was over for the day;</span>
+          </div>
+          <div class="line">
+            <span>And all the cattle-folk away</span>
+          </div>
+          <div class="line">
+            <span>And gipsy-folk and tinkers now</span>
+          </div>
+          <div class="line">
+            <span>Were lighting supper-fires without</span>
+          </div>
+          <div class="line">
+            <span>Each caravan and booth and tent.</span>
+          </div>
+          <div class="line">
+            <span>And, as I climbed the stiff hill-brow,</span>
+          </div>
+          <div class="line">
+            <span>I quite forgot my lucky hare.</span>
+          </div>
+          <div class="line">
+            <span>I'd something else to think about:</span>
+          </div>
+          <div class="line">
+            <span>For well I knew there's broken meat</span>
+          </div>
+          <div class="line">
+            <span>For empty bellies after fair-time;</span>
+          </div>
+          <div class="line">
+            <span>And looked to have a royal rare time</span>
+          </div>
+          <div class="line">
+            <span>With something rich and prime to eat:</span>
+          </div>
+          <div class="line">
+            <span>And then to lie and toast my feet</span>
+          </div>
+          <div class="line">
+            <span>All night beside the biggest fire.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>But, even as I neared the first,</span>
+          </div>
+          <div class="line">
+            <span>A pleasant whiff of stewing burst</span>
+          </div>
+          <div class="line">
+            <span>From out a smoking pot a-bubble:</span>
+          </div>
+          <div class="line">
+            <span>And, as I stopped behind the folk</span>
+          </div>
+          <div class="line">
+            <span>Who sprawled around, and watched it seething</span>
+          </div>
+          <div class="line">
+            <span>A woman heard my eager breathing,</span>
+          </div>
+          <div class="line">
+            <span>And, turning, caught my hungry eye:</span>
+          </div>
+          <div class="line">
+            <span>And called out to me: "Draw in nigher,</span>
+          </div>
+          <div class="line">
+            <span>Unless you find it too much trouble;</span>
+          </div>
+          <div class="line">
+            <span>Or you've a nose for better fare,</span>
+          </div>
+          <div class="line">
+            <span>And go to supper with the Squire...</span>
+          </div>
+          <div class="line">
+            <span>You've got the hungry parson's air!"</span>
+          </div>
+          <div class="line">
+            <span>And all looked up, and took the joke,</span>
+          </div>
+          <div class="line">
+            <span>As I dropped gladly to the ground</span>
+          </div>
+          <div class="line">
+            <span>Among them, where they all lay gazing</span>
+          </div>
+          <div class="line">
+            <span>Upon the bubbling and the blazing.</span>
+          </div>
+          <div class="line">
+            <span>My eyes were dazzled by the fire</span>
+          </div>
+          <div class="line">
+            <span>At first; and then I glanced around;</span>
+          </div>
+          <div class="line">
+            <span>And, in those swarthy, fire-lit faces--</span>
+          </div>
+          <div class="line">
+            <span>Though drowsing in the glare and heat</span>
+          </div>
+          <div class="line">
+            <span>And snuffing the warm savour in,</span>
+          </div>
+          <div class="line">
+            <span>Dead-certain of their fill of meat--</span>
+          </div>
+          <div class="line">
+            <span>I felt the bit between the teeth,</span>
+          </div>
+          <div class="line">
+            <span>The flying heels, the broken traces,</span>
+          </div>
+          <div class="line">
+            <span>And heard the highroad ring beneath</span>
+          </div>
+          <div class="line">
+            <span>The trampling hoofs: and knew them kin.</span>
+          </div>
+          <div class="line">
+            <span>Then for the first time, standing there</span>
+          </div>
+          <div class="line">
+            <span>Behind the woman who had hailed me,</span>
+          </div>
+          <div class="line">
+            <span>I saw a girl with eyes astare</span>
+          </div>
+          <div class="line">
+            <span>That looked in terror o'er my head:</span>
+          </div>
+          <div class="line">
+            <span>And, all at once, my courage failed me...</span>
+          </div>
+          <div class="line">
+            <span>For now again, and sore-adread,</span>
+          </div>
+          <div class="line">
+            <span>My hands were hot upon a hare,</span>
+          </div>
+          <div class="line">
+            <span>That struggled, strangling in the snare...</span>
+          </div>
+          <div class="line">
+            <span>Then once more as the girl stood clear,</span>
+          </div>
+          <div class="line">
+            <span>Before me--quaking cold with fear</span>
+          </div>
+          <div class="line">
+            <span>I saw the hare look from her eyes...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And when, at last, I turned to see</span>
+          </div>
+          <div class="line">
+            <span>What held her scared, I saw a man--</span>
+          </div>
+          <div class="line">
+            <span>A fat man with dull eyes aleer--</span>
+          </div>
+          <div class="line">
+            <span>Within the shadow of the van:</span>
+          </div>
+          <div class="line">
+            <span>And I was on the point to rise</span>
+          </div>
+          <div class="line">
+            <span>To send him spinning 'mid the wheels,</span>
+          </div>
+          <div class="line">
+            <span>And twist his neck between his heels,</span>
+          </div>
+          <div class="line">
+            <span>And stop his leering grin with mud...</span>
+          </div>
+          <div class="line">
+            <span>And would have done it in a tick...</span>
+          </div>
+          <div class="line">
+            <span>When, suddenly, alive with fright,</span>
+          </div>
+          <div class="line">
+            <span>She started, with red, parted lips,</span>
+          </div>
+          <div class="line">
+            <span>As though she guessed we'd come to grips,</span>
+          </div>
+          <div class="line">
+            <span>And turned her black eyes full on me...</span>
+          </div>
+          <div class="line">
+            <span>And, as I looked into their light,</span>
+          </div>
+          <div class="line">
+            <span>My heart forgot the lust of fight,</span>
+          </div>
+          <div class="line">
+            <span>And something shot me to the quick,</span>
+          </div>
+          <div class="line">
+            <span>And ran like wildfire through my blood,</span>
+          </div>
+          <div class="line">
+            <span>And tingled to my finger-tips...</span>
+          </div>
+          <div class="line">
+            <span>And, in a dazzling flash, I knew</span>
+          </div>
+          <div class="line">
+            <span>I'd never been alive before...</span>
+          </div>
+          <div class="line">
+            <span>And she was mine for evermore.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>While all the others slept asnore</span>
+          </div>
+          <div class="line">
+            <span>In caravan and tent that night,</span>
+          </div>
+          <div class="line">
+            <span>I lay alone beside the fire;</span>
+          </div>
+          <div class="line">
+            <span>And stared into its blazing core,</span>
+          </div>
+          <div class="line">
+            <span>With eyes that would not shut or tire,</span>
+          </div>
+          <div class="line">
+            <span>Because the best of all was true,</span>
+          </div>
+          <div class="line">
+            <span>And they looked still into the light</span>
+          </div>
+          <div class="line">
+            <span>Of her eyes, burning ever bright.</span>
+          </div>
+          <div class="line">
+            <span>Within the brightest coal for me...</span>
+          </div>
+          <div class="line">
+            <span>Once more, I saw her, as she started,</span>
+          </div>
+          <div class="line">
+            <span>And glanced at me with red lips parted:</span>
+          </div>
+          <div class="line">
+            <span>And, as she looked, the frightened hare</span>
+          </div>
+          <div class="line">
+            <span>Had fled her eyes; and, merrily,</span>
+          </div>
+          <div class="line">
+            <span>She smiled, with fine teeth flashing white,</span>
+          </div>
+          <div class="line">
+            <span>As though she, too, were happy-hearted...</span>
+          </div>
+          <div class="line">
+            <span>Then she had trembled suddenly,</span>
+          </div>
+          <div class="line">
+            <span>And dropped her eyes, as that fat man</span>
+          </div>
+          <div class="line">
+            <span>Stepped from the shadow of the van,</span>
+          </div>
+          <div class="line">
+            <span>And joined the circle, as the pot</span>
+          </div>
+          <div class="line">
+            <span>Was lifted off, and, piping-hot,</span>
+          </div>
+          <div class="line">
+            <span>The supper steamed in wooden bowls.</span>
+          </div>
+          <div class="line">
+            <span>Yet, she had hardly touched a bite:</span>
+          </div>
+          <div class="line">
+            <span>And never raised her eyes all night</span>
+          </div>
+          <div class="line">
+            <span>To mine again: but on the coals,</span>
+          </div>
+          <div class="line">
+            <span>As I sat staring, she had stared--</span>
+          </div>
+          <div class="line">
+            <span>The black curls, shining round her head</span>
+          </div>
+          <div class="line">
+            <span>From under the red kerchief, tied</span>
+          </div>
+          <div class="line">
+            <span>So nattily beneath her chin--</span>
+          </div>
+          <div class="line">
+            <span>And she had stolen off to bed</span>
+          </div>
+          <div class="line">
+            <span>Quite early, looking dazed and scared.</span>
+          </div>
+          <div class="line">
+            <span>Then, all agape and sleepy-eyed,</span>
+          </div>
+          <div class="line">
+            <span>Ere long the others had turned in:</span>
+          </div>
+          <div class="line">
+            <span>And I was rid of that fat man,</span>
+          </div>
+          <div class="line">
+            <span>Who slouched away to his own van.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And now, before her van, I lay,</span>
+          </div>
+          <div class="line">
+            <span>With sleepless eyes, awaiting day:</span>
+          </div>
+          <div class="line">
+            <span>And, as I gazed upon the glare,</span>
+          </div>
+          <div class="line">
+            <span>I heard, behind, a gentle stir:</span>
+          </div>
+          <div class="line">
+            <span>And, turning round, I looked on her</span>
+          </div>
+          <div class="line">
+            <span>Where she stood on the little stair</span>
+          </div>
+          <div class="line">
+            <span>Outside the van, with listening air--</span>
+          </div>
+          <div class="line">
+            <span>And, in her eyes, the hunted hare...</span>
+          </div>
+          <div class="line">
+            <span>And then, I saw her slip away,</span>
+          </div>
+          <div class="line">
+            <span>A bundle underneath her arm,</span>
+          </div>
+          <div class="line">
+            <span>Without a single glance at me.</span>
+          </div>
+          <div class="line">
+            <span>I lay a moment wondering,</span>
+          </div>
+          <div class="line">
+            <span>My heart a-thump like anything,</span>
+          </div>
+          <div class="line">
+            <span>Then, fearing she should come to harm,</span>
+          </div>
+          <div class="line">
+            <span>I rose, and followed speedily</span>
+          </div>
+          <div class="line">
+            <span>Where she had vanished in the night.</span>
+          </div>
+          <div class="line">
+            <span>And, as she heard my step behind,</span>
+          </div>
+          <div class="line">
+            <span>She started, and stopt dead with fright:</span>
+          </div>
+          <div class="line">
+            <span>Then blundered on as if struck blind:</span>
+          </div>
+          <div class="line">
+            <span>And now as I caught up with her,</span>
+          </div>
+          <div class="line">
+            <span>Just as she took the moorland track,</span>
+          </div>
+          <div class="line">
+            <span>I saw the hare's eyes, big and black...</span>
+          </div>
+          <div class="line">
+            <span>She made as though she'd double back...</span>
+          </div>
+          <div class="line">
+            <span>But, when she looked into my eyes,</span>
+          </div>
+          <div class="line">
+            <span>She stood quite still and did not stir...</span>
+          </div>
+          <div class="line">
+            <span>And, picking up her fallen pack,</span>
+          </div>
+          <div class="line">
+            <span>I tucked it 'neath my arm; and she</span>
+          </div>
+          <div class="line">
+            <span>Just took her luck quite quietly.</span>
+          </div>
+          <div class="line">
+            <span>As she must take what chance might come,</span>
+          </div>
+          <div class="line">
+            <span>And would not have it otherwise,</span>
+          </div>
+          <div class="line">
+            <span>And walked into the night with me,</span>
+          </div>
+          <div class="line">
+            <span>Without a word across the fells.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And, all about us, through the night,</span>
+          </div>
+          <div class="line">
+            <span>The mists were stealing, cold and white,</span>
+          </div>
+          <div class="line">
+            <span>Down every rushy syke or slack:</span>
+          </div>
+          <div class="line">
+            <span>But, soon the moon swung into sight:</span>
+          </div>
+          <div class="line">
+            <span>And, as we went, my heart was light,</span>
+          </div>
+          <div class="line">
+            <span>And singing like a burn in flood:</span>
+          </div>
+          <div class="line">
+            <span>And in my ears were tinkling bells:</span>
+          </div>
+          <div class="line">
+            <span>My body was a rattled drum:</span>
+          </div>
+          <div class="line">
+            <span>And fifes were shrilling through my blood</span>
+          </div>
+          <div class="line">
+            <span>That summer night, to think that she</span>
+          </div>
+          <div class="line">
+            <span>Was walking through the world with me.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>But when the air with dawn was chill,</span>
+          </div>
+          <div class="line">
+            <span>As we were travelling down a hill,</span>
+          </div>
+          <div class="line">
+            <span>She broke her silence with low-sobbing:</span>
+          </div>
+          <div class="line">
+            <span>And told her tale, her bosom throbbing</span>
+          </div>
+          <div class="line">
+            <span>As though her very heart were shaken</span>
+          </div>
+          <div class="line">
+            <span>With fear she'd yet be overtaken...</span>
+          </div>
+          <div class="line">
+            <span>She'd always lived in caravans--</span>
+          </div>
+          <div class="line">
+            <span>Her father's, gay as any man's,</span>
+          </div>
+          <div class="line">
+            <span>Grass-green, picked out with red and yellow</span>
+          </div>
+          <div class="line">
+            <span>And glittering brave with burnished brass</span>
+          </div>
+          <div class="line">
+            <span>That sparkled in the sun like flame,</span>
+          </div>
+          <div class="line">
+            <span>And window curtains, white as snow...</span>
+          </div>
+          <div class="line">
+            <span>But, they had died, ten years ago,</span>
+          </div>
+          <div class="line">
+            <span>Her parents both, when fever came...</span>
+          </div>
+          <div class="line">
+            <span>And they were buried, side by side,</span>
+          </div>
+          <div class="line">
+            <span>Somewhere beneath the wayside grass...</span>
+          </div>
+          <div class="line">
+            <span>In times of sickness, they kept wide</span>
+          </div>
+          <div class="line">
+            <span>Of towns and busybodies, so</span>
+          </div>
+          <div class="line">
+            <span>No parson's or policeman's tricks</span>
+          </div>
+          <div class="line">
+            <span>Should bother them when in a fix...</span>
+          </div>
+          <div class="line">
+            <span>Her father never could abide</span>
+          </div>
+          <div class="line">
+            <span>A black coat or a blue, poor man...</span>
+          </div>
+          <div class="line">
+            <span>And so, Long Dick, a kindly fellow,</span>
+          </div>
+          <div class="line">
+            <span>When you could keep him from the can,</span>
+          </div>
+          <div class="line">
+            <span>And Meg, his easy-going wife,</span>
+          </div>
+          <div class="line">
+            <span>Had taken her into their van;</span>
+          </div>
+          <div class="line">
+            <span>And kept her since her parents died...</span>
+          </div>
+          <div class="line">
+            <span>And she had lived a happy life,</span>
+          </div>
+          <div class="line">
+            <span>Until Fat Pete's young wife was taken...</span>
+          </div>
+          <div class="line">
+            <span>But, ever since, he'd pestered her...</span>
+          </div>
+          <div class="line">
+            <span>And she dared scarcely breathe or stir,</span>
+          </div>
+          <div class="line">
+            <span>Lest she should see his eyes aleer...</span>
+          </div>
+          <div class="line">
+            <span>And many a night she'd lain and shaken,</span>
+          </div>
+          <div class="line">
+            <span>And very nearly died of fear--</span>
+          </div>
+          <div class="line">
+            <span>Though safe enough within the van</span>
+          </div>
+          <div class="line">
+            <span>With Mother Meg and her good-man--</span>
+          </div>
+          <div class="line">
+            <span>For, since Fat Pete was Long Dick's friend,</span>
+          </div>
+          <div class="line">
+            <span>And they were thick and sweet as honey;</span>
+          </div>
+          <div class="line">
+            <span>And Dick owed Pete a pot of money,</span>
+          </div>
+          <div class="line">
+            <span>She knew too well how it must end...</span>
+          </div>
+          <div class="line">
+            <span>And she would rather lie stone dead</span>
+          </div>
+          <div class="line">
+            <span>Beneath the wayside grass than wed</span>
+          </div>
+          <div class="line">
+            <span>With leering Pete, and live the life,</span>
+          </div>
+          <div class="line">
+            <span>And die the death, of his first wife...</span>
+          </div>
+          <div class="line">
+            <span>And so, last night, clean-daft with dread,</span>
+          </div>
+          <div class="line">
+            <span>She'd bundled up a pack and fled...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>When all the sobbing tale was out,</span>
+          </div>
+          <div class="line">
+            <span>She dried her eyes, and looked about,</span>
+          </div>
+          <div class="line">
+            <span>As though she'd left all fear behind,</span>
+          </div>
+          <div class="line">
+            <span>And out of sight were out of mind.</span>
+          </div>
+          <div class="line">
+            <span>Then, when the dawn was burning red,</span>
+          </div>
+          <div class="line">
+            <span>"I'm hungry as a hawk!" she said:</span>
+          </div>
+          <div class="line">
+            <span>And from the bundle took out bread.</span>
+          </div>
+          <div class="line">
+            <span>And, at the happy end of night,</span>
+          </div>
+          <div class="line">
+            <span>We sat together by a burn:</span>
+          </div>
+          <div class="line">
+            <span>And ate a thick slice, turn by turn;</span>
+          </div>
+          <div class="line">
+            <span>And laughed and kissed between each bite.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Then, up again, and on our way</span>
+          </div>
+          <div class="line">
+            <span>We went; and tramped the livelong day</span>
+          </div>
+          <div class="line">
+            <span>The moorland trackways, steep and rough,</span>
+          </div>
+          <div class="line">
+            <span>Though there was little fear enough</span>
+          </div>
+          <div class="line">
+            <span>That they would follow on our flight.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And then again a shiny night</span>
+          </div>
+          <div class="line">
+            <span>Among the honey-scented heather,</span>
+          </div>
+          <div class="line">
+            <span>We wandered in the moonblaze bright,</span>
+          </div>
+          <div class="line">
+            <span>Together through a land of light,</span>
+          </div>
+          <div class="line">
+            <span>A lad and lass alone with life.</span>
+          </div>
+          <div class="line">
+            <span>And merrily we laughed together,</span>
+          </div>
+          <div class="line">
+            <span>When, starting up from sleep, we heard</span>
+          </div>
+          <div class="line">
+            <span>The cock-grouse talking to his wife...</span>
+          </div>
+          <div class="line">
+            <span>And "Old Fat Pete" she called the bird.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>Six months and more have cantered by:</span>
+          </div>
+          <div class="line">
+            <span>And, Winter past, we're out again--</span>
+          </div>
+          <div class="line">
+            <span>We've left the fat and weatherwise</span>
+          </div>
+          <div class="line">
+            <span>To keep their coops and reeking sties,</span>
+          </div>
+          <div class="line">
+            <span>And eat their fill of oven-pies,</span>
+          </div>
+          <div class="line">
+            <span>While we win free and out again</span>
+          </div>
+          <div class="line">
+            <span>To take potluck beneath the sky</span>
+          </div>
+          <div class="line">
+            <span>With sun and moon and wind and rain.</span>
+          </div>
+          <div class="line">
+            <span>Six happy months ... and yet, at night,</span>
+          </div>
+          <div class="line">
+            <span>I've often wakened in affright,</span>
+          </div>
+          <div class="line">
+            <span>And looked upon her lying there,</span>
+          </div>
+          <div class="line">
+            <span>Beside me sleeping quietly,</span>
+          </div>
+          <div class="line">
+            <span>Adread that when she waked, I'd see</span>
+          </div>
+          <div class="line">
+            <span>The hunted hare within her eyes.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>And, only last night, as I slept</span>
+          </div>
+          <div class="line">
+            <span>Beneath the shelter of a stack...</span>
+          </div>
+          <div class="line">
+            <span>My hands were hot upon a hare,</span>
+          </div>
+          <div class="line">
+            <span>Half-strangled, struggling in the snare,</span>
+          </div>
+          <div class="line">
+            <span>When, suddenly, her eyes shot back,</span>
+          </div>
+          <div class="line">
+            <span>Big, fearful, staggering and black;</span>
+          </div>
+          <div class="line">
+            <span>And ere I knew, my grip was slack,</span>
+          </div>
+          <div class="line">
+            <span>And I was clutching empty air...</span>
+          </div>
+          <div class="line">
+            <span>Bolt-upright from my sleep I leapt...</span>
+          </div>
+          <div class="line">
+            <span>Her place was empty in the straw...</span>
+          </div>
+          <div class="line">
+            <span>And then, with quaking heart, I saw</span>
+          </div>
+          <div class="line">
+            <span>That she was standing in the night,</span>
+          </div>
+          <div class="line">
+            <span>A leveret cuddled to her breast...</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>I spoke no word: but, as the light</span>
+          </div>
+          <div class="line">
+            <span>Through banks of Eastern cloud was breaking,</span>
+          </div>
+          <div class="line">
+            <span>She turned, and saw that I was waking:</span>
+          </div>
+          <div class="line">
+            <span>And told me how she could not rest;</span>
+          </div>
+          <div class="line">
+            <span>And, rising in the night, she'd found</span>
+          </div>
+          <div class="line">
+            <span>This baby-hare crouched on the ground;</span>
+          </div>
+          <div class="line">
+            <span>And she had nursed it quite a while:</span>
+          </div>
+          <div class="line">
+            <span>But, now, she'd better let it go...</span>
+          </div>
+          <div class="line">
+            <span>Its mother would be fretting so...</span>
+          </div>
+          <div class="line">
+            <span>A mother's heart...</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>I saw her smile,</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>And look at me with tender eyes:</span>
+          </div>
+          <div class="line">
+            <span>And as I looked into their light,</span>
+          </div>
+          <div class="line">
+            <span>My foolish, fearful heart grew wise...</span>
+          </div>
+          <div class="line">
+            <span>And now, I knew that never there</span>
+          </div>
+          <div class="line">
+            <span>I'd see again the startled hare,</span>
+          </div>
+          <div class="line">
+            <span>Or need to dread the dreams of night.</span>
+          </div>
+        </div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>1910-1911.</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="small">LONDON: PRINTED BY WILLIAM CLOWES AND SONS, LIMITED.</span></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
